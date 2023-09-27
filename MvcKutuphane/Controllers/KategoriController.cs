@@ -4,12 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MvcKutuphane.Models.Entity;
-
 namespace MvcKutuphane.Controllers
 {
     public class KategoriController : Controller
     {
-        DBKUTUPHANEEntities db = new DBKUTUPHANEEntities();
+        DBKUTUPHANEEntities2 db = new DBKUTUPHANEEntities2();
 
 
         // GET: Kategori

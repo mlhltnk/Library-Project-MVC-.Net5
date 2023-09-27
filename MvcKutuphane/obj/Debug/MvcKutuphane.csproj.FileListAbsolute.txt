@@ -77,6 +77,8 @@ C:\Users\Melih\Desktop\BosProje\MvcKutuphane\MvcKutuphane\obj\Debug\MvcKutuphane
 C:\Users\Melih\Desktop\BosProje\MvcKutuphane\MvcKutuphane\obj\Debug\MvcKutuphane.csproj.CopyComplete
 C:\Users\Melih\Desktop\BosProje\MvcKutuphane\MvcKutuphane\obj\Debug\MvcKutuphane.dll
 C:\Users\Melih\Desktop\BosProje\MvcKutuphane\MvcKutuphane\obj\Debug\MvcKutuphane.pdb
+C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\obj\Debug\MvcKutuphane.csproj.AssemblyReference.cache
+C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\obj\Debug\MvcKutuphane.csproj.CoreCompileInputs.cache
 C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\MvcKutuphane.dll.config
 C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\MvcKutuphane.dll
 C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\MvcKutuphane.pdb
@@ -145,6 +147,8 @@ C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\System.Web.Web
 C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\WebGrease.dll
 C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\EntityFramework.xml
 C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\EntityFramework.SqlServer.xml
+C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\Newtonsoft.Json.xml
 C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\System.Web.Helpers.xml
 C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\System.Web.Mvc.xml
 C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\System.Web.Optimization.xml
@@ -152,11 +156,7 @@ C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\System.Web.Raz
 C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\System.Web.WebPages.xml
 C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\System.Web.WebPages.Deployment.xml
 C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\System.Web.WebPages.Razor.xml
-C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\Newtonsoft.Json.xml
 C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\Antlr3.Runtime.pdb
-C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\obj\Debug\MvcKutuphane.csproj.AssemblyReference.cache
-C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\obj\Debug\MvcKutuphane.csproj.CoreCompileInputs.cache
 C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\obj\Debug\MvcKutuphane.csproj.CopyComplete
 C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\obj\Debug\MvcKutuphane.dll
 C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\obj\Debug\MvcKutuphane.pdb

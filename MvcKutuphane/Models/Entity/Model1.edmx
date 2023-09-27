@@ -381,7 +381,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DBKUTUPHANEEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DBKUTUPHANEEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="TBLCEZALAR" EntityType="Self.TBLCEZALAR" />
           <EntitySet Name="TBLHAREKET" EntityType="Self.TBLHAREKET" />
@@ -421,7 +421,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DBKUTUPHANEModelStoreContainer" CdmEntityContainer="DBKUTUPHANEEntities">
+        <EntityContainerMapping StorageEntityContainer="DBKUTUPHANEModelStoreContainer" CdmEntityContainer="DBKUTUPHANEEntities2">
           <EntitySetMapping Name="sysdiagrams">
             <EntityTypeMapping TypeName="DBKUTUPHANEModel.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
