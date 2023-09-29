@@ -8,7 +8,7 @@ namespace MvcKutuphane.Controllers
 {
     public class KategoriController : Controller
     {
-        DBKUTUPHANEEntities2 db = new DBKUTUPHANEEntities2();
+        DBKUTUPHANEEntities4 db = new DBKUTUPHANEEntities4();
 
 
         // GET: Kategori

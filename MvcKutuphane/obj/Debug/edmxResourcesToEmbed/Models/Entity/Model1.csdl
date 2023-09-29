@@ -174,7 +174,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="DBKUTUPHANEEntities2" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="DBKUTUPHANEEntities4" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="TBLCEZALAR" EntityType="Self.TBLCEZALAR" />
     <EntitySet Name="TBLHAREKET" EntityType="Self.TBLHAREKET" />

@@ -13,10 +13,10 @@ namespace MvcKutuphane.Models.Entity
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DBKUTUPHANEEntities2 : DbContext
+    public partial class DBKUTUPHANEEntities4 : DbContext
     {
-        public DBKUTUPHANEEntities2()
-            : base("name=DBKUTUPHANEEntities2")
+        public DBKUTUPHANEEntities4()
+            : base("name=DBKUTUPHANEEntities4")
         {
         }
     
