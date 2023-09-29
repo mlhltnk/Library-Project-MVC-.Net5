@@ -160,3 +160,7 @@ C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\Antlr3.Runtime
 C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\obj\Debug\MvcKutuphane.csproj.CopyComplete
 C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\obj\Debug\MvcKutuphane.dll
 C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\obj\Debug\MvcKutuphane.pdb
+C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\PagedList.dll
+C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\PagedList.Mvc.dll
+C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\PagedList.xml
+C:\Users\Melih\Desktop\KUTUPHANEMVC\MvcKutuphane\MvcKutuphane\bin\PagedList.Mvc.xml
