@@ -25,7 +25,6 @@ namespace MvcKutuphane.Models.Entity
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TBLCEZALAR> TBLCEZALAR { get; set; }
         public virtual DbSet<TBLHAREKET> TBLHAREKET { get; set; }
         public virtual DbSet<TBLKASA> TBLKASA { get; set; }

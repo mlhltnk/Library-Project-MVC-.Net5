@@ -1,15 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="DBKUTUPHANEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
-  </EntityType>
   <EntityType Name="TBLCEZALAR">
     <Key>
       <PropertyRef Name="ID" />
@@ -28,7 +18,7 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="KITAP" Type="int" />
     <Property Name="UYE" Type="int" />
-    <Property Name="PERSONEL" Type="int" />
+    <Property Name="PERSONEL" Type="tinyint" />
     <Property Name="ALISTARIH" Type="smalldatetime" />
     <Property Name="IADETARIH" Type="smalldatetime" />
   </EntityType>
@@ -126,6 +116,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_TBLHAREKET_TBLPERSONEL">
+    <End Role="TBLPERSONEL" Type="Self.TBLPERSONEL" Multiplicity="0..1" />
+    <End Role="TBLHAREKET" Type="Self.TBLHAREKET" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLPERSONEL">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TBLHAREKET">
+        <PropertyRef Name="PERSONEL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_TBLHAREKET_TBLUYELER">
     <End Role="TBLUYELER" Type="Self.TBLUYELER" Multiplicity="0..1" />
     <End Role="TBLHAREKET" Type="Self.TBLHAREKET" Multiplicity="*" />
@@ -163,7 +165,6 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="DBKUTUPHANEModelStoreContainer">
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLCEZALAR" EntityType="Self.TBLCEZALAR" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLHAREKET" EntityType="Self.TBLHAREKET" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLKASA" EntityType="Self.TBLKASA" Schema="dbo" store:Type="Tables" />
@@ -182,6 +183,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_TBLHAREKET_TBLKITAP" Association="Self.FK_TBLHAREKET_TBLKITAP">
       <End Role="TBLKITAP" EntitySet="TBLKITAP" />
+      <End Role="TBLHAREKET" EntitySet="TBLHAREKET" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLHAREKET_TBLPERSONEL" Association="Self.FK_TBLHAREKET_TBLPERSONEL">
+      <End Role="TBLPERSONEL" EntitySet="TBLPERSONEL" />
       <End Role="TBLHAREKET" EntitySet="TBLHAREKET" />
     </AssociationSet>
     <AssociationSet Name="FK_TBLHAREKET_TBLUYELER" Association="Self.FK_TBLHAREKET_TBLUYELER">

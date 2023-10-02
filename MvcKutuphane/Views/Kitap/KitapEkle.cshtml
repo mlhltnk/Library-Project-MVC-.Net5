@@ -49,20 +49,10 @@
         <button class="btn btn-info">Kitap Ekle</button>
     </div>
 
+  <input type="hidden" name="Durum" value="true" />
+         @*KitapEkle kısmında defaultta true gelmesi için hidden ekleme*@
+
 </form>
 
 
 
-{
-            //var kitaplar = from k in db.TBLKITAP select k;  //k değişkeniyle tblkitap tablosuna ulaş ve k'yı(yani tüm tabloyu) seç
-
-
-            if (!string.IsNullOrEmpty(p))
-            {
-               var ktp = db.TBLKITAP.Where(x => x.AD.Contains(p));
-                //Kullanıcının girdiği "p" metni, her kitabın "AD"(isim) özelliği içerisinde bulunup bulunmadığını kontrol eder
-                return View(ktp.ToList());
-            }
-            var kitaplar = db.TBLKITAP.ToList();
-            return View(kitaplar);
-        }

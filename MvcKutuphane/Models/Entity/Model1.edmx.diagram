@@ -5,13 +5,12 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="47ee83bd7e8b4303a4a61fe5d813cfc3" Name="Diagram1">
-        <EntityTypeShape EntityType="DBKUTUPHANEModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLCEZALAR" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLHAREKET" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLKASA" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLKASA" Width="1.5" PointX="9.125" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLKATEGORI" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLKITAP" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLPERSONEL" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLPERSONEL" Width="1.5" PointX="6.5" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLUYELER" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLYAZAR" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
         <AssociationConnector Association="DBKUTUPHANEModel.FK_TBLCEZALAR_TBLHAREKET" ManuallyRouted="false" />
@@ -20,6 +19,7 @@
         <AssociationConnector Association="DBKUTUPHANEModel.FK_TBLHAREKET_TBLUYELER" ManuallyRouted="false" />
         <AssociationConnector Association="DBKUTUPHANEModel.FK_TBLKITAP_TBLKATEGORI" ManuallyRouted="false" />
         <AssociationConnector Association="DBKUTUPHANEModel.FK_TBLKITAP_TBLYAZAR" ManuallyRouted="false" />
+        <AssociationConnector Association="DBKUTUPHANEModel.FK_TBLHAREKET_TBLPERSONEL" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
