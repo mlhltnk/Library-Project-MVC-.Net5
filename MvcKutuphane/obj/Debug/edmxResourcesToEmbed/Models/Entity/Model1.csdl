@@ -27,6 +27,8 @@
     <NavigationProperty Name="TBLKITAP" Relationship="Self.FK_TBLHAREKET_TBLKITAP" FromRole="TBLHAREKET" ToRole="TBLKITAP" />
     <NavigationProperty Name="TBLUYELER" Relationship="Self.FK_TBLHAREKET_TBLUYELER" FromRole="TBLHAREKET" ToRole="TBLUYELER" />
     <NavigationProperty Name="TBLPERSONEL" Relationship="DBKUTUPHANEModel.FK_TBLHAREKET_TBLPERSONEL" FromRole="TBLHAREKET" ToRole="TBLPERSONEL" />
+    <Property Name="ISLEMDURUM" Type="Boolean" />
+    <Property Name="UYEGETİRTARİH" Type="DateTime" Precision="0" />
   </EntityType>
   <EntityType Name="TBLKASA">
     <Key>

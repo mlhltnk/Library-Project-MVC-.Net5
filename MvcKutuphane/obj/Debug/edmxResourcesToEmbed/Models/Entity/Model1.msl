@@ -16,6 +16,8 @@
     <EntitySetMapping Name="TBLHAREKET">
       <EntityTypeMapping TypeName="DBKUTUPHANEModel.TBLHAREKET">
         <MappingFragment StoreEntitySet="TBLHAREKET">
+          <ScalarProperty Name="UYEGETİRTARİH" ColumnName="UYEGETİRTARİH" />
+          <ScalarProperty Name="ISLEMDURUM" ColumnName="ISLEMDURUM" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="KITAP" ColumnName="KITAP" />
           <ScalarProperty Name="UYE" ColumnName="UYE" />
