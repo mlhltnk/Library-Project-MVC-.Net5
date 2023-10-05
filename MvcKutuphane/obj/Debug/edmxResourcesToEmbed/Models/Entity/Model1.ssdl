@@ -51,6 +51,7 @@
     <Property Name="YAYINEVI" Type="varchar" MaxLength="50" />
     <Property Name="SAYFASAYISI" Type="varchar" MaxLength="4" />
     <Property Name="DURUM" Type="bit" />
+    <Property Name="KITAPRESIM" Type="varchar" MaxLength="250" />
   </EntityType>
   <EntityType Name="TBLPERSONEL">
     <Key>

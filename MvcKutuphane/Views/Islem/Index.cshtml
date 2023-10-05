@@ -16,8 +16,8 @@
         <th>Üye</th>
         <th>Personel</th>
         <th>Alış Tarihi</th>
-        <th>İade Tarihi</th>
-        <th>İade Al</th>
+        <th>Üyenin İade Tarihi</th>
+        <th>Detaylar</th>
     </tr>
 
     @foreach (var k in Model)
@@ -28,7 +28,7 @@
             <td>@k.TBLUYELER.AD &nbsp @k.TBLUYELER.SOYAD</td>
             <td>@k.TBLPERSONEL.PERSONEL</td>
             <td>@Convert.ToDateTime(k.ALISTARIH).ToString("dd/MM/yyyy")</td>
-            <td>@Convert.ToDateTime(k.IADETARIH).ToString("dd/MM/yyyy")</td>
+            <td>@Convert.ToDateTime(k.UYEGETİRTARİH).ToString("dd/MM/yyyy")</td>
             <td><a href="/Odunc/Odunciade/@k.ID" class="btn btn-default" style="background-color:bisque">Detaylar</a></td>
 
         </tr>

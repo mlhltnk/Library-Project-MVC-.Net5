@@ -47,6 +47,7 @@
     <EntitySetMapping Name="TBLKITAP">
       <EntityTypeMapping TypeName="DBKUTUPHANEModel.TBLKITAP">
         <MappingFragment StoreEntitySet="TBLKITAP">
+          <ScalarProperty Name="KITAPRESIM" ColumnName="KITAPRESIM" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="AD" ColumnName="AD" />
           <ScalarProperty Name="KATEGORI" ColumnName="KATEGORI" />
