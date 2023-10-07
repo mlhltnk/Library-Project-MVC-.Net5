@@ -92,5 +92,24 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="TBLHAKKIMIZDA">
+      <EntityTypeMapping TypeName="DBKUTUPHANEModel.TBLHAKKIMIZDA">
+        <MappingFragment StoreEntitySet="TBLHAKKIMIZDA">
+          <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLILETISIM">
+      <EntityTypeMapping TypeName="DBKUTUPHANEModel.TBLILETISIM">
+        <MappingFragment StoreEntitySet="TBLILETISIM">
+          <ScalarProperty Name="MESAJ" ColumnName="MESAJ" />
+          <ScalarProperty Name="KONU" ColumnName="KONU" />
+          <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+          <ScalarProperty Name="AD" ColumnName="AD" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -11,6 +11,13 @@
     <Property Name="PARA" Type="decimal" Precision="18" Scale="2" />
     <Property Name="HAREKET" Type="int" />
   </EntityType>
+  <EntityType Name="TBLHAKKIMIZDA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ACIKLAMA" Type="varchar(max)" />
+  </EntityType>
   <EntityType Name="TBLHAREKET">
     <Key>
       <PropertyRef Name="ID" />
@@ -23,6 +30,16 @@
     <Property Name="IADETARIH" Type="smalldatetime" />
     <Property Name="UYEGETİRTARİH" Type="smalldatetime" />
     <Property Name="ISLEMDURUM" Type="bit" />
+  </EntityType>
+  <EntityType Name="TBLILETISIM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AD" Type="varchar" MaxLength="50" />
+    <Property Name="MAIL" Type="varchar" MaxLength="50" />
+    <Property Name="KONU" Type="varchar" MaxLength="50" />
+    <Property Name="MESAJ" Type="varchar" MaxLength="1000" />
   </EntityType>
   <EntityType Name="TBLKASA">
     <Key>
@@ -169,7 +186,9 @@
   </Association>
   <EntityContainer Name="DBKUTUPHANEModelStoreContainer">
     <EntitySet Name="TBLCEZALAR" EntityType="Self.TBLCEZALAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLHAKKIMIZDA" EntityType="Self.TBLHAKKIMIZDA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLHAREKET" EntityType="Self.TBLHAREKET" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLILETISIM" EntityType="Self.TBLILETISIM" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLKASA" EntityType="Self.TBLKASA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLKATEGORI" EntityType="Self.TBLKATEGORI" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLKITAP" EntityType="Self.TBLKITAP" Schema="dbo" store:Type="Tables" />

@@ -7,7 +7,7 @@
       <Diagram DiagramId="47ee83bd7e8b4303a4a61fe5d813cfc3" Name="Diagram1">
         <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLCEZALAR" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLHAREKET" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLKASA" Width="1.5" PointX="9.125" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLKASA" Width="1.5" PointX="10.25" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLKATEGORI" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLKITAP" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLPERSONEL" Width="1.5" PointX="6.5" PointY="5.375" IsExpanded="true" />
@@ -20,6 +20,8 @@
         <AssociationConnector Association="DBKUTUPHANEModel.FK_TBLKITAP_TBLKATEGORI" ManuallyRouted="false" />
         <AssociationConnector Association="DBKUTUPHANEModel.FK_TBLKITAP_TBLYAZAR" ManuallyRouted="false" />
         <AssociationConnector Association="DBKUTUPHANEModel.FK_TBLHAREKET_TBLPERSONEL" />
+        <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLHAKKIMIZDA" Width="1.5" PointX="10.125" PointY="3.125" />
+        <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLILETISIM" Width="1.5" PointX="9.625" PointY="6.625" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -206,6 +206,8 @@
       <End Role="TBLPERSONEL" EntitySet="TBLPERSONEL" />
       <End Role="TBLHAREKET" EntitySet="TBLHAREKET" />
     </AssociationSet>
+    <EntitySet Name="TBLHAKKIMIZDA" EntityType="DBKUTUPHANEModel.TBLHAKKIMIZDA" />
+    <EntitySet Name="TBLILETISIM" EntityType="DBKUTUPHANEModel.TBLILETISIM" />
   </EntityContainer>
   <Association Name="FK_TBLHAREKET_TBLPERSONEL">
     <End Type="DBKUTUPHANEModel.TBLPERSONEL" Role="TBLPERSONEL" Multiplicity="0..1" />
@@ -219,4 +221,21 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="TBLHAKKIMIZDA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ACIKLAMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBLILETISIM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KONU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MESAJ" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>
