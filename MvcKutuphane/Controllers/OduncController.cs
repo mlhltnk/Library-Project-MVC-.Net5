@@ -39,7 +39,7 @@ namespace MvcKutuphane.Controllers
             DateTime d1 = DateTime.Parse(odnc.IADETARIH.ToString());                //d1;başlangıçtaki kitapın verilmesi gereken tarih 
 
             DateTime d2 = Convert.ToDateTime(DateTime.Now.ToShortDateString());     //d2; bugünün tarihini alıyoruz. 
-                                                                                    //Bugünün tarihini string olarak alıyor
+                                                                                    //Bugünün tarihini string olarak alıyor 
             TimeSpan d3 = d2 - d1;                //ZAMANLARI BİRBİRİNDEN ÇIKARMAK için Timespan kullanılır
             ViewBag.dgr = d3.TotalDays;
 
