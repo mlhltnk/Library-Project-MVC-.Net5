@@ -32,9 +32,16 @@ namespace MvcKutuphane.Controllers
             return View();
         }
 
-        public ActionResult Odunciade(int id)
+        public ActionResult Odunciade(TBLHAREKET p)
         {
-            var odnc = db.TBLHAREKET.Find(id);
+            var odnc = db.TBLHAREKET.Find(p.ID);
+
+            DateTime d1 = DateTime.Parse(odnc.IADETARIH.ToString());                //d1;başlangıçtaki kitapın verilmesi gereken tarih 
+
+            DateTime d2 = Convert.ToDateTime(DateTime.Now.ToShortDateString());     //d2; bugünün tarihini alıyoruz. 
+                                                                                    //Bugünün tarihini string olarak alıyor
+            TimeSpan d3 = d2 - d1;                //ZAMANLARI BİRBİRİNDEN ÇIKARMAK için Timespan kullanılır
+            ViewBag.dgr = d3.TotalDays;
 
             return View("Odunciade",odnc);
         }
@@ -42,8 +49,8 @@ namespace MvcKutuphane.Controllers
         public ActionResult OduncGuncelle(TBLHAREKET p)
         {
             var hrk = db.TBLHAREKET.Find(p.ID);
-            hrk.UYEGETİRTARİH = p.UYEGETİRTARİH;   //kategorinin yeni adı=indexten yeni giriş yapılan ad
-            hrk.ISLEMDURUM = true;  //geri alınca true'ya dönsün
+            hrk.UYEGETİRTARİH = p.UYEGETİRTARİH;    //kategorinin yeni adı=indexten yeni giriş yapılan ad
+            hrk.ISLEMDURUM = true;                  //geri alınca true'ya dönsün
             db.SaveChanges();
             return RedirectToAction("Index");
         }
