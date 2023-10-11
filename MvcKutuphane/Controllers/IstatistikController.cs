@@ -4,14 +4,25 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MvcKutuphane.Models.Entity;
 
 namespace MvcKutuphane.Controllers
 {
     public class IstatistikController : Controller
     {
         // GET: Istatistik
+        DBKUTUPHANEEntities4 db = new DBKUTUPHANEEntities4();
         public ActionResult Index()
         {
+            var deger1 = db.TBLUYELER.Count();
+            var deger2 = db.TBLKITAP.Count();
+            var deger3 = db.TBLKITAP.Where(x => x.DURUM == false).Count();
+            var deger4 = db.TBLCEZALAR.Sum(x => x.PARA);
+            ViewBag.dgr1 =deger1;
+            ViewBag.dgr2 =deger2;
+            ViewBag.dgr3 =deger3;
+            ViewBag.dgr4 =deger4;
+            
             return View();
         }
 
@@ -39,5 +50,19 @@ namespace MvcKutuphane.Controllers
             }
             return RedirectToAction("Galeri");
         }
+
+        public ActionResult Linqkart()
+        {
+            var deger1 = db.TBLKITAP.Count();
+            var deger2 = db.TBLUYELER.Count();
+            var deger3 = db.TBLCEZALAR.Sum(x => x.PARA);
+            var deger4 = db.TBLKITAP.Where(x => x.DURUM==false).Count();
+            ViewBag.dgr1 =deger1;
+            ViewBag.dgr2 =deger2;
+            ViewBag.dgr3 =deger3;
+            ViewBag.dgr4 =deger4;
+            return View();
+        }
+
     }
 }

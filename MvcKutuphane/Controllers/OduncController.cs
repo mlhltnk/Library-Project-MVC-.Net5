@@ -36,7 +36,9 @@ namespace MvcKutuphane.Controllers
         {
             var odnc = db.TBLHAREKET.Find(p.ID);
 
-            DateTime d1 = DateTime.Parse(odnc.IADETARIH.ToString());                //d1;başlangıçtaki kitapın verilmesi gereken tarih 
+
+            //DateTime d1 = DateTime.Parse(odnc.IADETARIH.ToString());                //d1;başlangıçtaki kitapın verilmesi gereken tarih 
+            DateTime d1 = odnc.IADETARIH.Value.Date;
 
             DateTime d2 = Convert.ToDateTime(DateTime.Now.ToShortDateString());     //d2; bugünün tarihini alıyoruz. 
                                                                                     //Bugünün tarihini string olarak alıyor 
