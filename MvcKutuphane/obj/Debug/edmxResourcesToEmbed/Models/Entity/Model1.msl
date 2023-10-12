@@ -111,5 +111,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="EnfazlaKitapYazar" FunctionName="DBKUTUPHANEModel.Store.EnfazlaKitapYazar" />
   </EntityContainerMapping>
 </Mapping>

@@ -208,6 +208,7 @@
     </AssociationSet>
     <EntitySet Name="TBLHAKKIMIZDA" EntityType="DBKUTUPHANEModel.TBLHAKKIMIZDA" />
     <EntitySet Name="TBLILETISIM" EntityType="DBKUTUPHANEModel.TBLILETISIM" />
+    <FunctionImport Name="EnfazlaKitapYazar" ReturnType="Collection(String)" />
   </EntityContainer>
   <Association Name="FK_TBLHAREKET_TBLPERSONEL">
     <End Type="DBKUTUPHANEModel.TBLPERSONEL" Role="TBLPERSONEL" Multiplicity="0..1" />
