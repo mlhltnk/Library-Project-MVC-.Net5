@@ -53,6 +53,14 @@ namespace MvcKutuphane.Controllers
 
             return RedirectToAction("Index"); 
         }
+
+        public ActionResult Kitaplarım() 
+        {
+            var kullanici = (string)Session["Mail"];
+            var id=db.TBLUYELER.Where(x=>x.MAIL==kullanici.ToString()).Select(x=>x.ID).FirstOrDefault();  //sessiondan gelen kullanıcının id'sini seçme işlemi
+            var degerler = db.TBLHAREKET.Where(x => x.UYE==id).ToList();
+            return View(degerler);
+        }
     }
 
 }
