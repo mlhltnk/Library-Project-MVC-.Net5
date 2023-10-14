@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -58,10 +59,31 @@ namespace MvcKutuphane.Controllers
             var deger3 = db.TBLCEZALAR.Sum(x => x.PARA);
             var deger4 = db.TBLKITAP.Where(x => x.DURUM==false).Count();
             var deger5 = db.TBLKATEGORI.Count();
+
+            var deger6 = db.TBLHAREKET.GroupBy(x=>x.TBLUYELER.AD).OrderByDescending(z=>z.Count()).
+                Select(y=>y.Key).FirstOrDefault();
+
             var deger8 = db.EnfazlaKitapYazar().FirstOrDefault();
 
+            //-----------------------------------------------------------------------------------------------------------------
             var deger9 = db.TBLKITAP.GroupBy(x => x.YAYINEVI).OrderByDescending(z=>z.Count()).
-                Select(y=>new {y.Key}).FirstOrDefault();
+                Select(y=>y.Key).FirstOrDefault();
+
+            //GroupBy(x => x.YAYINEVI):aynı yayınevine sahip olan kitapları aynı grup içinde toplar.
+
+            //OrderByDescending(z => z.Count()):Grupları grup içindeki kitap sayısına göre azalan sırada sıralar. En fazla kitaba sahip yayınevinden başlayarak azalan sırada sıralama yapar.
+
+            //Select(y =>  y.Key ): Her bir grup için yalnızca "YAYINEVI" alanını içeren yeni bir anonim nesne koleksiyonu oluşturur.
+            //Bu, gruplandırılmış verinin yalnızca yayınevi bilgilerini içeren bir sonuç koleksiyonunu döndürür.
+
+            //FirstOrDefault(): Sıralanmış sonuçlardan yalnızca ilk sıradaki sonucu alır. Yani, en fazla kitaba sahip olan yayınevinin bilgilerini alır.
+
+            //veritabanındaki kitapların yayınevlerine göre gruplandırılmasını, gruplar arasında kitap sayısına göre sıralanmasını ve en fazla kitaba sahip olan yayınevinin bilgilerini almayı amaçlar.
+            //Bu bilgiler bir anonim nesne içinde saklanır ve en fazla kitaba sahip olan yayınevinin bilgilerini içeren bu nesne döndürülür.
+            //-------------------------------------------------------------------------------------------------------------------
+
+
+
 
 
             var deger11 = db.TBLILETISIM.Count();
@@ -70,6 +92,7 @@ namespace MvcKutuphane.Controllers
             ViewBag.dgr3 =deger3;
             ViewBag.dgr4 =deger4;
             ViewBag.dgr5 =deger5;
+            ViewBag.dgr6 =deger6;
             ViewBag.dgr11 =deger11;
             ViewBag.dgr8 = deger8;
             ViewBag.dgr9 =deger9;
