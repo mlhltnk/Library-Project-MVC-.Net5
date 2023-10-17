@@ -39,6 +39,7 @@
     <EntitySetMapping Name="TBLKATEGORI">
       <EntityTypeMapping TypeName="DBKUTUPHANEModel.TBLKATEGORI">
         <MappingFragment StoreEntitySet="TBLKATEGORI">
+          <ScalarProperty Name="DURUM" ColumnName="DURUM" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="AD" ColumnName="AD" />
         </MappingFragment>

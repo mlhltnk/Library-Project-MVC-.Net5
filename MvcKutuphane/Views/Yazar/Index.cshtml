@@ -14,9 +14,9 @@
         <th>Id</th>
         <th>Ad</th>
         <th>Soyad</th>
-        <th>Detay</th>
         <th>Sil</th>
         <th>Güncelle</th>
+        <th>Yazarın Kitapları</th>
     </tr>
 
 
@@ -27,9 +27,9 @@
             <td>@yzr.ID</td>
             <td>@yzr.AD</td>
             <td>@yzr.SOYAD</td>
-            <td>@yzr.DETAY</td>
             <td>@Html.ActionLink("Sil","YazarSil", new {id=yzr.ID}, new {@class="btn btn-danger", onclick="return confirm('Silmek İstiyor musunuz?')"})</td>
-            <td><a href="/Yazar/Yazargetir/@yzr.ID" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Yazar/Yazargetir/@yzr.ID" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="/Yazar/YazarKitaplar/@yzr.ID" class="btn btn-default" style="background-color:palevioletred">Yazarın Kitapları</a></td>
 
 
         </tr>

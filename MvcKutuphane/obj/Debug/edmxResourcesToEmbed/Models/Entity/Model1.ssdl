@@ -55,6 +55,7 @@
     </Key>
     <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="AD" Type="varchar" MaxLength="20" />
+    <Property Name="DURUM" Type="bit" />
   </EntityType>
   <EntityType Name="TBLKITAP">
     <Key>

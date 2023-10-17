@@ -64,5 +64,13 @@ namespace MvcKutuphane.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult YazarKitaplar(int id)
+        {
+            var yazar =db.TBLKITAP.Where(x=>x.YAZAR == id).ToList();  
+            //göndermiş olduğum id'ye göre o yazardaki kitapları listelemiş olacağım
+           
+            return View(yazar);
+        }
     }
 }

@@ -62,7 +62,7 @@ namespace MvcKutuphane.Controllers
         public ActionResult UyeGuncelle(TBLUYELER p)
         {
             var uye = db.TBLUYELER.Find(p.ID);
-            uye.AD = p.AD;   //kategorinin yeni adı=indexten yeni giriş yapılan ad
+            uye.AD = p.AD;   //kategorinin yeni adı=indexten giriş yapılan ad
             uye.SOYAD = p.SOYAD;
             uye.MAIL= p.MAIL;
             uye.KULLANICIADI= p.KULLANICIADI;
@@ -72,6 +72,13 @@ namespace MvcKutuphane.Controllers
             uye.FOTOGRAF= p.FOTOGRAF;
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public ActionResult UyeKitapGecmis(int id)
+        {
+            //kullanıcının kitap geçmişini veritabanından çeker ve kullanıcıya görüntüler. 
+            var gecmis = db.TBLHAREKET.Where(x=>x.UYE==id).ToList();
+            return View(gecmis);
         }
 
     }
