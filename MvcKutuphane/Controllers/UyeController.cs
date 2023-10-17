@@ -77,8 +77,10 @@ namespace MvcKutuphane.Controllers
         public ActionResult UyeKitapGecmis(int id)
         {
             //kullanıcının kitap geçmişini veritabanından çeker ve kullanıcıya görüntüler. 
-            var gecmis = db.TBLHAREKET.Where(x=>x.UYE==id).ToList();
-            return View(gecmis);
+            var kitapgecmis = db.TBLHAREKET.Where(x=>x.UYE==id).ToList();
+            var uyebilgisi = db.TBLUYELER.Where(y => y.ID == id).Select(z => z.AD + " " + z.SOYAD).FirstOrDefault();
+            ViewBag.uyeblgs = uyebilgisi;
+            return View(kitapgecmis);
         }
 
     }

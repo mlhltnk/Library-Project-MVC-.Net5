@@ -14,8 +14,8 @@ namespace MvcKutuphane.Controllers
         // GET: Kitap
         public ActionResult Index(string p) //"p", kullanıcının arama yapmak için girdiği metni almak için kullanılır.
         {
-            var kitaplar = from k in db.TBLKITAP select k;  //k değişkeniyle tblkitap tablosuna ulaş ve k'yı(yani tüm tabloyu) seç
 
+            var kitaplar = from k in db.TBLKITAP select k;  //k değişkeniyle tblkitap tablosuna ulaş ve k'yı(yani tüm tabloyu) seç
 
             if(!string.IsNullOrEmpty(p))
             {
@@ -49,6 +49,8 @@ namespace MvcKutuphane.Controllers
                                            }).ToList();
 
             ViewBag.dgr1 = deger1;
+
+
 
             List<SelectListItem> deger2 = (from i in db.TBLYAZAR.ToList() select new SelectListItem
                                                                              {

@@ -67,8 +67,10 @@ namespace MvcKutuphane.Controllers
 
         public ActionResult YazarKitaplar(int id)
         {
-            var yazar =db.TBLKITAP.Where(x=>x.YAZAR == id).ToList();  
             //göndermiş olduğum id'ye göre o yazardaki kitapları listelemiş olacağım
+            var yazar =db.TBLKITAP.Where(x=>x.YAZAR == id).ToList();
+            var yazaradı = db.TBLYAZAR.Where(x => x.ID == id).Select(z => z.AD + " " + z.SOYAD).FirstOrDefault();
+            ViewBag.yzr = yazaradı;
            
             return View(yazar);
         }
