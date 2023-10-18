@@ -211,6 +211,7 @@
     <EntitySet Name="TBLILETISIM" EntityType="DBKUTUPHANEModel.TBLILETISIM" />
     <FunctionImport Name="EnfazlaKitapYazar" ReturnType="Collection(String)" />
     <EntitySet Name="TBLMESAJLAR" EntityType="DBKUTUPHANEModel.TBLMESAJLAR" />
+    <EntitySet Name="TBLDUYURULAR" EntityType="DBKUTUPHANEModel.TBLDUYURULAR" />
   </EntityContainer>
   <Association Name="FK_TBLHAREKET_TBLPERSONEL">
     <End Type="DBKUTUPHANEModel.TBLPERSONEL" Role="TBLPERSONEL" Multiplicity="0..1" />
@@ -251,5 +252,13 @@
     <Property Name="KONU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="ICERIK" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
     <Property Name="TARIH" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="TBLDUYURULAR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KATEGORI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ICERIK" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>

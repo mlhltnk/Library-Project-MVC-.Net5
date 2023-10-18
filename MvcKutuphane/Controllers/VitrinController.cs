@@ -16,8 +16,12 @@ namespace MvcKutuphane.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            Class1 cs = new Class1();
-            cs.Deger1 = db.TBLKITAP.ToList();
+            //İLİŞKİSİ OLMAYAN 2 VERİTABANINI TEK BİR VİEW'DE GÖSTERME İŞLEMİ
+
+            Class1 cs = new Class1();           //Class1 modelimizin  yeni bir örneği(cs) oluşturduk. 
+
+            cs.Deger1 = db.TBLKITAP.ToList();    //cs adlı Class1 nesnesinin Deger1 adlı bir özelliği ayarlanıyor.
+                                                 //Deger1 özelliği, veritabanından alınan TBLKITAP tablosunun tüm verilerini içerecektir.
             cs.Deger2 = db.TBLHAKKIMIZDA.ToList();
 
             //var degerler = db.TBLKITAP.ToList();

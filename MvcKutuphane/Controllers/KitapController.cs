@@ -84,8 +84,8 @@ namespace MvcKutuphane.Controllers
 
         public ActionResult KitapGetir(int id)
         {
-            var ktp = db.TBLKITAP.Find(id);
-            //yazargetire verileri getirme işlemi
+            var ktp = db.TBLKITAP.Find(id);    //TBLKITAP adlı bir veritabanı tablosundan, id parametresi ile belirtilen kitabın bilgilerini çekmek için kullanılır.
+
 
             List<SelectListItem> deger1 = (from i in db.TBLKATEGORI.ToList()  //linq sorgu  //KATEGORİLERİ GETİRME İŞLEMİ
                                            select new SelectListItem
@@ -106,7 +106,7 @@ namespace MvcKutuphane.Controllers
             ViewBag.dgr2 = deger2;
 
 
-            return View("KitapGetir", ktp);
+            return View("KitapGetir", ktp);  //ktp, görünümde kullanılacak kitap bilgilerini içerir. "KitapGetir" ise kullanılacak görünümün adını belirtir.
         }
 
 
