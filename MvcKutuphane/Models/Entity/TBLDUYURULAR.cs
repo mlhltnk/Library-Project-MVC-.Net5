@@ -17,5 +17,6 @@ namespace MvcKutuphane.Models.Entity
         public byte ID { get; set; }
         public string KATEGORI { get; set; }
         public string ICERIK { get; set; }
+        public Nullable<System.DateTime> TARIH { get; set; }
     }
 }

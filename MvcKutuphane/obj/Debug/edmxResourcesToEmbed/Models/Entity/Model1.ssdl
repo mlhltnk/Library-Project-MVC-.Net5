@@ -18,6 +18,7 @@
     <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="KATEGORI" Type="varchar" MaxLength="50" />
     <Property Name="ICERIK" Type="varchar" MaxLength="200" />
+    <Property Name="TARIH" Type="datetime" />
   </EntityType>
   <EntityType Name="TBLHAKKIMIZDA">
     <Key>

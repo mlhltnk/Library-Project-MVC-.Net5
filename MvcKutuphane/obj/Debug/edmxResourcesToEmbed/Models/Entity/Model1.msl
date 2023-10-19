@@ -128,6 +128,7 @@
     <EntitySetMapping Name="TBLDUYURULAR">
       <EntityTypeMapping TypeName="DBKUTUPHANEModel.TBLDUYURULAR">
         <MappingFragment StoreEntitySet="TBLDUYURULAR">
+          <ScalarProperty Name="TARIH" ColumnName="TARIH" />
           <ScalarProperty Name="ICERIK" ColumnName="ICERIK" />
           <ScalarProperty Name="KATEGORI" ColumnName="KATEGORI" />
           <ScalarProperty Name="ID" ColumnName="ID" />

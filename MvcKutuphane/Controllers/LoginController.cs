@@ -8,6 +8,7 @@ using System.Web.Security;
 
 namespace MvcKutuphane.Controllers
 {
+    [AllowAnonymous]     //BU KOMUT SAYESİNDE AUTHRİZE OLMADAN BU SAYFAYA GİREBİLİYORUM.(GLOBAL.ASAX'A YAPTIĞIM CONFİGTEN BENİ MUAF TUTUYOR)
     public class LoginController : Controller
     {
         DBKUTUPHANEEntities4 db = new DBKUTUPHANEEntities4();

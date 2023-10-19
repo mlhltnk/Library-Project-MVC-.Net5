@@ -10,8 +10,10 @@ namespace MvcKutuphane
 {
     public class MvcApplication : System.Web.HttpApplication
     {
-        protected void Application_Start()
+        protected void Application_Start()     //Projenin başlangıç dosya metodu
         {
+            GlobalFilters.Filters.Add(new AuthorizeAttribute());    //eğerki sisteme authentice olunmadıysa hiçbir şekilde giriş yapılamayacak!!!
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

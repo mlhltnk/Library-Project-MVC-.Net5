@@ -3,18 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using System.Web.Services.Description;
 using MvcKutuphane.Models.Entity;
 using static System.Collections.Specialized.BitVector32;
 
 namespace MvcKutuphane.Controllers
 {
+
+
+    
     public class PanelimController : Controller
     {
         DBKUTUPHANEEntities4 db = new DBKUTUPHANEEntities4();
         // GET: Panelim
 
-        [Authorize]
+        
         [HttpGet]
         public ActionResult Index()  //listeleme işlemi
         {          
@@ -54,12 +58,30 @@ namespace MvcKutuphane.Controllers
             return RedirectToAction("Index"); 
         }
 
+
+        
         public ActionResult Kitaplarım() 
         {
             var kullanici = (string)Session["Mail"];
             var id=db.TBLUYELER.Where(x=>x.MAIL==kullanici.ToString()).Select(x=>x.ID).FirstOrDefault();  //sessiondan gelen kullanıcının id'sini seçme işlemi
             var degerler = db.TBLHAREKET.Where(x => x.UYE==id).ToList();
             return View(degerler);
+        }
+
+
+        
+        public ActionResult Duyurular()
+        {
+            var duyurulistesi = db.TBLDUYURULAR.ToList();
+            return View(duyurulistesi);
+        }
+
+        
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();                //çıkış yap işlemi için kullanılır.
+
+            return RedirectToAction("GirisYap","login");  //logincontrollerdaki giriş yapa yönlendir
         }
     }
 

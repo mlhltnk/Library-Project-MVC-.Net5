@@ -16,5 +16,43 @@ namespace MvcKutuphane.Controllers
             var dyr = db.TBLDUYURULAR.ToList();
             return View(dyr);
         }
+
+        [HttpGet]
+        public ActionResult Yeniduyuru()
+        { 
+            return View(); 
+        }
+
+        [HttpPost]
+        public ActionResult YeniDuyuru(TBLDUYURULAR p)
+        {
+            db.TBLDUYURULAR.Add(p);
+            db.SaveChanges();
+            return RedirectToAction("Index");    
+        }
+        public ActionResult DuyuruSil(int id)
+        {
+           var dyr= db.TBLDUYURULAR.Find(id);
+            db.TBLDUYURULAR.Remove(dyr);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult DuyuruDetay(TBLDUYURULAR p)
+        {
+            var duyuru = db.TBLDUYURULAR.Find(p.ID);
+            return View("DuyuruDetay",duyuru); //duyuru değişkenini kullanarak "DuyuruDetay" adlı bir görünümü(View) döndürür
+        }
+
+        public ActionResult DuyuruGüncelle(TBLDUYURULAR p)
+        {
+            var prs = db.TBLDUYURULAR.Find(p.ID);
+            prs.ICERIK = p.ICERIK;  //kategorinin yeni adı=indexten yeni giriş yapılan ad
+            prs.KATEGORI = p.KATEGORI;
+            prs.TARIH = p.TARIH;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
+
 }
