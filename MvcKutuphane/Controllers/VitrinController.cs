@@ -16,7 +16,7 @@ namespace MvcKutuphane.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            //İLİŞKİSİ OLMAYAN 2 VERİTABANINI TEK BİR VİEW'DE GÖSTERME İŞLEMİ
+            //İLİŞKİSİ OLMAYAN 2 VERİTABANINI TEK BİR VİEW'DE GÖSTERME İŞLEMİ (ya bu şekilde yapılır ya da Partialview ile yapılır)                   
 
             Class1 cs = new Class1();           //Class1 modelimizin  yeni bir örneği(cs) oluşturduk. 
 
