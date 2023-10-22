@@ -1,0 +1,47 @@
+﻿@using MvcKutuphane.Models.Entity
+@model List<TBLADMIN>
+
+@{
+    ViewBag.Title = "Index2";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<link rel="stylesheet" href="~/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css">
+
+<table class="table table-bordered ">
+
+    <tr>
+        <td>ID</td>
+        <td>Kullanıcı</td>
+        <td>Yetki</td>
+        <td>Düzenle</td>
+        <td>Sil</td>
+    </tr>
+
+@foreach (var item in Model)
+{
+
+    <tr>
+        <td>@item.ID</td>
+        <td>@item.Kullanici</td>
+        <td>@item.Yetki</td>
+        <td>
+            <a class="btn btn-info btn-sm" href="#">
+                <i class="fas fa-pencil-alt">
+                </i>
+                DÜZENLE
+            </a>
+        </td>
+        <td>
+            <a class="btn btn-danger btn-sm" href="#">
+                <i class="fas fa-trash">
+                </i>
+                SİL
+            </a>
+        </td>
+    </tr>
+
+
+}
+
+</table>
+

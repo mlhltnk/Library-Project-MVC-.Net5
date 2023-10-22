@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace MvcKutuphane.Controllers
 {
+    [AllowAnonymous]
     public class KayitOlController : Controller
     {
         DBKUTUPHANEEntities4 db = new DBKUTUPHANEEntities4();

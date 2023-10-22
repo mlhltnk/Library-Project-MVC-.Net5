@@ -27,7 +27,8 @@ namespace MvcKutuphane.Controllers
             if (bilgiler != null)
             {
                 FormsAuthentication.SetAuthCookie(bilgiler.MAIL, false);
-                //Session ile indexe veri taşıyoruz. isimlendirme db ile alakası yok indexdeki ile aynı olması yeterli
+
+                //Session ile indexe veri taşıyoruz. isimlendirme veritabanı ile alakası yok indexdeki ile aynı olması yeterli
                 Session["Mail"]=bilgiler.MAIL.ToString();
 
                 //TempData["id"]=bilgiler.ID.ToString();
