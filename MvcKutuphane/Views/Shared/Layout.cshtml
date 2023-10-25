@@ -59,8 +59,12 @@ body {font-family: "Lato", sans-serif;}
         <a href="/Yazar/Index"><i class="glyphicon glyphicon-pencil"></i>&nbsp; Yazarlar</a>
         <a href="/Uye/Index"><i class="glyphicon glyphicon-user"></i>&nbsp;Üyeler</a>
         <a href="/Personel/Index"><i class="glyphicon glyphicon-tower"></i>&nbsp; Personeller</a>
-        <a href="/Odunc/Index"><i class="glyphicon glyphicon-circle-arrow-right"></i>&nbsp; Ödünç Kitap Geri Al</a>
-        <a href="/Odunc/OduncVer"><i class="glyphicon glyphicon-circle-arrow-left"></i>&nbsp; Ödünç Kitap Ver</a>
+        @if (User.IsInRole("A"))
+                //ROL BAZLI MENÜ GİZLEME; Sadece A yetkisine sahip olan hesaplar koşul içindeki alanları görebilir
+        {
+            <a href="/Odunc/Index"><i class="glyphicon glyphicon-circle-arrow-right"></i>&nbsp; Ödünç Kitap Geri Al</a>
+            <a href="/Odunc/OduncVer"><i class="glyphicon glyphicon-circle-arrow-left"></i>&nbsp; Ödünç Kitap Ver</a>
+        }
         <a href="/Duyuru/Index"><i class="glyphicon glyphicon-earphone"></i>&nbsp; Duyurular</a>
         <a href="/Islem/Index"><i class="glyphicon glyphicon-dashboard"></i>&nbsp; İşlemler</a>
         <a href="/Istatistik/Hava/"><i class="glyphicon glyphicon-cloud"></i>&nbsp; Hava Durumu</a>
@@ -68,7 +72,7 @@ body {font-family: "Lato", sans-serif;}
         <a href="/Istatistik/galeri/"><i class="glyphicon glyphicon-picture"></i>&nbsp; Galeri</a>
         <a href="/istatistik/linqkart/"><i class="glyphicon glyphicon-bookmark"></i>&nbsp; Linq Kartlar</a>
         <a href="/vitrin/index/"><i class="glyphicon glyphicon-picture"></i>&nbsp; Vitrin</a>
-        <a href="#"><i class="glyphicon glyphicon-cog"></i>&nbsp; Ayarlar</a>
+        <a href="/ayarlar/index2"><i class="glyphicon glyphicon-cog"></i>&nbsp; Ayarlar</a>
         <a href="#"><i class="glyphicon glyphicon-remove-sign"></i>&nbsp; Çıkış</a>
 
     </div>

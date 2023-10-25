@@ -17,7 +17,7 @@ namespace MvcKutuphane.Controllers
 
 
 
-
+        [Authorize(Roles = "A")]    //YETKİ TANIMLAMA İŞLEMİ-->sadece yetkisi A olanlar buraya girebilir!!!
         public ActionResult Index()
         {
             var degerler = db.TBLHAREKET.Where(x=>x.ISLEMDURUM == false).ToList();
