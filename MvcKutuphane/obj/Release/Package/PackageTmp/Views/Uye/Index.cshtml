@@ -1,0 +1,47 @@
+﻿@using MvcKutuphane.Models.Entity
+@using PagedList
+@using PagedList.Mvc
+
+
+
+@model PagedList.IPagedList<TBLUYELER>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Uyeler ID</th>
+        <th>Uyeler Adı</th>
+        <th>Uyeler Soyadı</th>
+        <th>Okul</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Uye Kitap Geçmişi</th>
+    </tr>
+
+    @foreach (var uye in Model)
+    {
+        <tr>
+            <td>@uye.ID</td>
+            <td>@uye.AD</td>
+            <td>@uye.SOYAD</td>
+            <td>@uye.OKUL</td>
+            <td><a href="/Uye/UyeSil/@uye.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Uye/UyeGetir/@uye.ID" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Uye/UyeKitapGecmis/@uye.ID" class="btn btn-warning">Kitap Geçmişi</a></td>
+
+        </tr>
+    }
+</table>
+
+@Html.PagedListPager((IPagedList)Model, sayfa=>Url.Action("Index", new {sayfa}))
+@*Sayfada görünen sayfalandırma işlemi görselidir.
+    Modelimden gelecek değerleri indexte sayfa sayfa listelememizi sağlar*@
+
+<a href="/Uye/UyeEkle/" class="btn btn-primary">Yeni Üye Ekle</a>

@@ -41,12 +41,15 @@
         <label>Sayfa Sayısı</label>
         @Html.TextBoxFor(k => k.SAYFASAYISI, new { @class = "form-control" })
     </div>
-
+    <div class="form-group">
+        <label>Kitap Görsel</label>
+        @Html.TextBoxFor(k => k.KITAPRESIM, new { @class = "form-control" })
+    </div>
 
     <div>
         <button class="btn btn-danger">Guncelle</button>
 
-      
+
     </div>
 }
 

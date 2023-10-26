@@ -117,6 +117,7 @@ namespace MvcKutuphane.Controllers
             ktp.BASIMYIL = p.BASIMYIL;
             ktp.YAYINEVI = p.YAYINEVI;
             ktp.SAYFASAYISI = p.SAYFASAYISI;
+            ktp.KITAPRESIM = p.KITAPRESIM;
             ktp.DURUM = true;  //güncellemede ilk durum true gelsin
 
             var ktg = db.TBLKATEGORI.Where(k => k.ID == p.TBLKATEGORI.ID).FirstOrDefault();
