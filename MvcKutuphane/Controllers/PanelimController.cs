@@ -23,21 +23,17 @@ namespace MvcKutuphane.Controllers
         public ActionResult Index()  //listeleme işlemi
         {          
           var uyemail = (string)Session["Mail"];
-            //Kullanıcının oturum(Session) verileri kullanılarak, oturumdan kullanıcının e-posta adresini alır.
-            //Oturum,web uygulamalarında kullanıcıya özgü geçici verileri depolamaktadır. e posta verisini uyemail'e atadık.
-
-           // var degerler = db.TBLUYELER.FirstOrDefault(z => z.MAIL == uyemail);  //TBLUYELER adlı tablodan uyemail değişkenine eşit olan e-posta adresine sahip ilk kaydı seçer(bu kayıt tüm sutunları içerir)
-                                                                                  //bunu degerlere atar
+        
 
             var degerler = db.TBLDUYURULAR.ToList();
 
-            var d1 = db.TBLUYELER.Where(x=>x.MAIL==uyemail).Select(y=>y.AD).FirstOrDefault();  //sessiondan gelen ad bilgisini d1 e atadık
+            var d1 = db.TBLUYELER.Where(x=>x.MAIL==uyemail).Select(y=>y.AD).FirstOrDefault();  
             ViewBag.d1 = d1;
 
-            var d2 = db.TBLUYELER.Where(x => x.MAIL == uyemail).Select(y => y.SOYAD).FirstOrDefault();  //d1'e Soyadı'ı atadık.
+            var d2 = db.TBLUYELER.Where(x => x.MAIL == uyemail).Select(y => y.SOYAD).FirstOrDefault();  
             ViewBag.d2 = d2;
 
-            var d3 = db.TBLUYELER.Where(x => x.MAIL == uyemail).Select(y => y.FOTOGRAF).FirstOrDefault();  //d1'e fotograf'ı atadık.
+            var d3 = db.TBLUYELER.Where(x => x.MAIL == uyemail).Select(y => y.FOTOGRAF).FirstOrDefault();  
             ViewBag.d3 = d3;
 
             var d4 = db.TBLUYELER.Where(x => x.MAIL == uyemail).Select(y => y.KULLANICIADI).FirstOrDefault();  
@@ -53,29 +49,29 @@ namespace MvcKutuphane.Controllers
             ViewBag.d7 = d7;
 
             var uyeid = db.TBLUYELER.Where(x => x.MAIL == uyemail).Select(y => y.ID).FirstOrDefault();  
-            ViewBag.d8 = db.TBLHAREKET.Where(x => x.UYE == uyeid).Count();  //hareket tablosunda üyeid değeri sayısını saydırdık
+            ViewBag.d8 = db.TBLHAREKET.Where(x => x.UYE == uyeid).Count();  
 
-            var d9 = db.TBLMESAJLAR.Where(x => x.ALICI == uyemail).Count();  //mesajlar tablom içerisinde sisteme authentica olan üye mail kaç tane geçiyorsa onu bize verecek
+            var d9 = db.TBLMESAJLAR.Where(x => x.ALICI == uyemail).Count();  
             ViewBag.d9 = d9;
 
             var d10 = db.TBLDUYURULAR.Count();
             ViewBag.d10 = d10;
 
-            return View(degerler);    //kullanıcının oturum bilgilerini kullanarak veritabanından kullanıcının profiliyle ilgili bilgileri çeker
+            return View(degerler);    
         }
 
 
 
 
         [HttpPost]
-        public ActionResult Index2(TBLUYELER p)  //SIFRE Resetleme İŞLEMİ  burada
+        public ActionResult Index2(TBLUYELER p)  
         { 
             
-            var kullanici = (string)Session["Mail"];  //session içerisindeki mail adlı kullanıcı bilgisini kullanici adlı değişkene atadım(stringe çevirip)
+            var kullanici = (string)Session["Mail"];  
 
-            var uye = db.TBLUYELER.FirstOrDefault(x => x.MAIL == kullanici);  //TBLUYELER adlı tablodan kullanıcı değişkenine eşit olan e-posta adresine sahip ilk kaydı seçer (bu kayıt tüm sutunları içerir) bunu uye'ye atar
+            var uye = db.TBLUYELER.FirstOrDefault(x => x.MAIL == kullanici);  
             
-            uye.SIFRE = p.SIFRE;  //uyeden gelen şifre, p ile indexten giriş yapılan şifre ile değiştirilir
+            uye.SIFRE = p.SIFRE;  
 
             uye.AD = p.AD;
 
@@ -95,7 +91,7 @@ namespace MvcKutuphane.Controllers
         public ActionResult Kitaplarım() 
         {
             var kullanici = (string)Session["Mail"];
-            var id=db.TBLUYELER.Where(x=>x.MAIL==kullanici.ToString()).Select(x=>x.ID).FirstOrDefault();  //sessiondan gelen kullanıcının id'sini seçme işlemi
+            var id=db.TBLUYELER.Where(x=>x.MAIL==kullanici.ToString()).Select(x=>x.ID).FirstOrDefault();  
             var degerler = db.TBLHAREKET.Where(x => x.UYE==id).ToList();
             return View(degerler);
         }
@@ -111,9 +107,9 @@ namespace MvcKutuphane.Controllers
         
         public ActionResult Logout()
         {
-            FormsAuthentication.SignOut();                //çıkış yap işlemi için kullanılır.
+            FormsAuthentication.SignOut();                
 
-            return RedirectToAction("GirisYap","login");  //logincontrollerdaki giriş yapa yönlendir
+            return RedirectToAction("GirisYap","login");  
         }
 
         public PartialViewResult Partial1()
@@ -124,10 +120,10 @@ namespace MvcKutuphane.Controllers
         public PartialViewResult Partial2()
         {
             var kullanici = (string)Session["Mail"];
-            var id = db.TBLUYELER.Where(x => x.MAIL == kullanici).Select(y => y.ID).FirstOrDefault();   //sisteme giriş yapan kullanıcı id bilgisini aldık
-                                                         //kullanıcının e-posta adresini kullanarak veritabanından kullanıcının kimliğini (ID) alınır. Bu ID bu kullanıcının diğer bilgilerini çekmek için kullanılacaktır.
-            var uyebul = db.TBLUYELER.Find(id);         //veritabanından kullanıcının ID'sine karşılık gelen kullanıcı kaydını alır.
-            return PartialView(uyebul);     //partial2yi döndür üyebul'dan gelen değerle döndür
+            var id = db.TBLUYELER.Where(x => x.MAIL == kullanici).Select(y => y.ID).FirstOrDefault();   
+                                                         
+            var uyebul = db.TBLUYELER.Find(id);        
+            return PartialView(uyebul);     
         }
 
     }

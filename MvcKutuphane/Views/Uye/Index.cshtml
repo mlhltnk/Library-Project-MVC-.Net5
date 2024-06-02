@@ -41,7 +41,6 @@
 </table>
 
 @Html.PagedListPager((IPagedList)Model, sayfa=>Url.Action("Index", new {sayfa}))
-@*Sayfada görünen sayfalandırma işlemi görselidir.
-    Modelimden gelecek değerleri indexte sayfa sayfa listelememizi sağlar*@
+
 
 <a href="/Uye/UyeEkle/" class="btn btn-primary">Yeni Üye Ekle</a>

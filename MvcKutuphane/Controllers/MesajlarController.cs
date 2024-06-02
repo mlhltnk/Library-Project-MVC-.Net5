@@ -15,7 +15,7 @@ namespace MvcKutuphane.Controllers
         public ActionResult Index()
         {
             var uyemail = (string)Session["MAIL"].ToString();
-            var mesajlar = db.TBLMESAJLAR.Where(x => x.ALICI == uyemail.ToString()).ToList();  //sadece kendimize gelen mailleri görmek için linq
+            var mesajlar = db.TBLMESAJLAR.Where(x => x.ALICI == uyemail.ToString()).ToList();  
             return View(mesajlar);
         }
 
@@ -30,9 +30,9 @@ namespace MvcKutuphane.Controllers
         public ActionResult YeniMesaj(TBLMESAJLAR t)
         {
             var uyemail = (string)Session["MAIL"].ToString();
-            t.GONDEREN = uyemail.ToString();                                //gonderen bilgisini buradan alacak
-            t.TARIH = DateTime.Parse(DateTime.Now.ToShortDateString());     //tarih bilgisini buradan alacak
-            db.TBLMESAJLAR.Add(t);                                          //alıcı konu içerik bilgisini textboxfor'lar aracılığı ile alacak
+            t.GONDEREN = uyemail.ToString();                              
+            t.TARIH = DateTime.Parse(DateTime.Now.ToShortDateString());     
+            db.TBLMESAJLAR.Add(t);                                         
             db.SaveChanges();
 
             return RedirectToAction("Giden","Mesajlar");

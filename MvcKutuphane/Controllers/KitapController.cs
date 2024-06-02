@@ -12,10 +12,10 @@ namespace MvcKutuphane.Controllers
     {
         DBKUTUPHANEEntities4 db = new DBKUTUPHANEEntities4();
         // GET: Kitap
-        public ActionResult Index(string p) //"p", kullanıcının arama yapmak için girdiği metni almak için kullanılır.
+        public ActionResult Index(string p) 
         {
 
-            var kitaplar = from k in db.TBLKITAP select k;  //k değişkeniyle tblkitap tablosuna ulaş ve k'yı(yani tüm tabloyu) seç
+            var kitaplar = from k in db.TBLKITAP select k;  
 
             if(!string.IsNullOrEmpty(p))
             {
@@ -106,7 +106,7 @@ namespace MvcKutuphane.Controllers
             ViewBag.dgr2 = deger2;
 
 
-            return View("KitapGetir", ktp);  //ktp, görünümde kullanılacak kitap bilgilerini içerir. "KitapGetir" ise kullanılacak görünümün adını belirtir.
+            return View("KitapGetir", ktp);  
         }
 
 
@@ -121,9 +121,7 @@ namespace MvcKutuphane.Controllers
             ktp.DURUM = true;  //güncellemede ilk durum true gelsin
 
             var ktg = db.TBLKATEGORI.Where(k => k.ID == p.TBLKATEGORI.ID).FirstOrDefault();
-            //k olarak adlandırılan her kayıt için ID alanının p.TBLKATEGORI.ID ile eşleşen ilk değeri getir.
-            //TBLKATEGORI tablosundan ID değeri p.TBLKATEGORI.ID ile eşleşen kayıtları seçip ktg'ye atar.
-
+          
             var yzr = db.TBLYAZAR.Where(y => y.ID == p.TBLYAZAR.ID).FirstOrDefault(); //ilişkisel tablo
 
             ktp.KATEGORI = ktg.ID;
@@ -134,6 +132,6 @@ namespace MvcKutuphane.Controllers
 
             return RedirectToAction("Index");
         }
-
+        
     }
 }

@@ -21,7 +21,7 @@ namespace MvcKutuphane.Controllers
         [HttpPost]
         public ActionResult Login(TBLADMIN p)
         {
-            //----------------------LOGİN İŞLEMİ-------------------------------
+          
 
             var bilgiler = db.TBLADMIN.FirstOrDefault(x => x.Kullanici == p.Kullanici && x.Sifre==p.Sifre);
 
@@ -36,7 +36,7 @@ namespace MvcKutuphane.Controllers
 
                 return View();
             }
-            //--------------------------LOGİN İŞLEMİ SON------------------------
+           
         }
 
     }

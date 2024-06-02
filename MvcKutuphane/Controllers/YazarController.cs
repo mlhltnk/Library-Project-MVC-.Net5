@@ -58,7 +58,7 @@ namespace MvcKutuphane.Controllers
         public ActionResult YazarGuncelle(TBLYAZAR p)
         {
             var yzr = db.TBLYAZAR.Find(p.ID);
-            yzr.AD = p.AD;   //kategorinin yeni adı=indexten yeni giriş yapılan ad
+            yzr.AD = p.AD;   
             yzr.SOYAD = p.SOYAD;
             yzr.DETAY = p.DETAY;
             db.SaveChanges();
@@ -67,7 +67,7 @@ namespace MvcKutuphane.Controllers
 
         public ActionResult YazarKitaplar(int id)
         {
-            //göndermiş olduğum id'ye göre o yazardaki kitapları listelemiş olacağım
+      
             var yazar =db.TBLKITAP.Where(x=>x.YAZAR == id).ToList();
             var yazaradı = db.TBLYAZAR.Where(x => x.ID == id).Select(z => z.AD + " " + z.SOYAD).FirstOrDefault();
             ViewBag.yzr = yazaradı;

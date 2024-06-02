@@ -41,13 +41,13 @@ namespace MvcKutuphane.Controllers
         public ActionResult DuyuruDetay(TBLDUYURULAR p)
         {
             var duyuru = db.TBLDUYURULAR.Find(p.ID);
-            return View("DuyuruDetay",duyuru); //duyuru değişkenini kullanarak "DuyuruDetay" adlı bir görünümü(View) döndürür
+            return View("DuyuruDetay",duyuru); 
         }
 
         public ActionResult DuyuruGüncelle(TBLDUYURULAR p)
         {
             var prs = db.TBLDUYURULAR.Find(p.ID);
-            prs.ICERIK = p.ICERIK;  //kategorinin yeni adı=indexten yeni giriş yapılan ad
+            prs.ICERIK = p.ICERIK;  
             prs.KATEGORI = p.KATEGORI;
             prs.TARIH = p.TARIH;
             db.SaveChanges();

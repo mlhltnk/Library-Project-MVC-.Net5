@@ -24,7 +24,7 @@ namespace MvcKutuphane.Controllers
             if(!ModelState.IsValid)
             {
                 return View("PersonelEkle");  
-                //arka taraftaki dataannotation sağlanamadıysa personelekleye geri dön
+              
             }
             db.TBLPERSONEL.Add(p);
             db.SaveChanges();
@@ -57,7 +57,7 @@ namespace MvcKutuphane.Controllers
         public ActionResult PersonelGuncelle(TBLPERSONEL p)
         {
             var prs = db.TBLPERSONEL.Find(p.ID);
-            prs.PERSONEL = p.PERSONEL;   //kategorinin yeni adı=indexten yeni giriş yapılan ad
+            prs.PERSONEL = p.PERSONEL;   
             db.SaveChanges();
             return RedirectToAction("Index");
         }

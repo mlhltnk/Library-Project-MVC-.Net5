@@ -17,12 +17,12 @@ namespace MvcKutuphane.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            //İLİŞKİSİ OLMAYAN 2 VERİTABANINI TEK BİR VİEW'DE GÖSTERME İŞLEMİ (ya bu şekilde yapılır ya da Partialview ile yapılır)                   
+                             
 
-            Class1 cs = new Class1();           //Class1 modelimizin  yeni bir örneği(cs) oluşturduk. 
+            Class1 cs = new Class1();        
 
-            cs.Deger1 = db.TBLKITAP.ToList();    //cs adlı Class1 nesnesinin Deger1 adlı bir özelliği ayarlanıyor.
-                                                 //Deger1 özelliği, veritabanından alınan TBLKITAP tablosunun tüm verilerini içerecektir.
+            cs.Deger1 = db.TBLKITAP.ToList();    
+                                                 
             cs.Deger2 = db.TBLHAKKIMIZDA.ToList();
 
             //var degerler = db.TBLKITAP.ToList();

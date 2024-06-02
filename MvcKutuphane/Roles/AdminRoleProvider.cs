@@ -43,7 +43,7 @@ namespace MvcKutuphane.Roles
            var deger = db.TBLADMIN.FirstOrDefault(x => x.Kullanici == username);
             return new string[] { deger.Yetki };   //deger değişkeninin Yetki özelliğinden rol alınır
         }
-        //---------------------------------------------------------------------------------------------------------------------------------------------
+      
 
         public override string[] GetUsersInRole(string roleName)
         {

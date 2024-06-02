@@ -20,7 +20,7 @@ namespace MvcKutuphane.Controllers
             if (!ModelState.IsValid)
             {
                 return View("Kayit");
-                //arka taraftaki dataannotation sağlanamadıysa Kayıt'a geri dön
+               
             }
             db.TBLUYELER.Add(p);
             db.SaveChanges();

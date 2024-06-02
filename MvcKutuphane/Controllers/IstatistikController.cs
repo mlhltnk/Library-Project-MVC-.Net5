@@ -65,22 +65,10 @@ namespace MvcKutuphane.Controllers
 
             var deger8 = db.EnfazlaKitapYazar().FirstOrDefault();
 
-            //-----------------------------------------------------------------------------------------------------------------
             var deger9 = db.TBLKITAP.GroupBy(x => x.YAYINEVI).OrderByDescending(z=>z.Count()).
                 Select(y=>y.Key).FirstOrDefault();
 
-            //GroupBy(x => x.YAYINEVI):aynı yayınevine sahip olan kitapları aynı grup içinde toplar.
-
-            //OrderByDescending(z => z.Count()):Grupları grup içindeki kitap sayısına göre azalan sırada sıralar. En fazla kitaba sahip yayınevinden başlayarak azalan sırada sıralama yapar.
-
-            //Select(y =>  y.Key ): Her bir grup için yalnızca "YAYINEVI" alanını içeren yeni bir anonim nesne koleksiyonu oluşturur.
-            //Bu, gruplandırılmış verinin yalnızca yayınevi bilgilerini içeren bir sonuç koleksiyonunu döndürür.
-
-            //FirstOrDefault(): Sıralanmış sonuçlardan yalnızca ilk sıradaki sonucu alır. Yani, en fazla kitaba sahip olan yayınevinin bilgilerini alır.
-
-            //veritabanındaki kitapların yayınevlerine göre gruplandırılmasını, gruplar arasında kitap sayısına göre sıralanmasını ve en fazla kitaba sahip olan yayınevinin bilgilerini almayı amaçlar.
-            //Bu bilgiler bir anonim nesne içinde saklanır ve en fazla kitaba sahip olan yayınevinin bilgilerini içeren bu nesne döndürülür.
-            //-------------------------------------------------------------------------------------------------------------------
+          
 
 
 

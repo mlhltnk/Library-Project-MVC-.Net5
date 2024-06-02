@@ -21,7 +21,7 @@ namespace MvcKutuphane.Controllers
             //var degerler = db.TBLUYELER.ToList();
 
             var degerler = db.TBLUYELER.ToList().ToPagedList(sayfa, 3);   
-            //sayfa numarası sayfa değerinden başlasın, her sayfada 3 değer göstersin
+       
 
             return View(degerler);
         }
@@ -31,7 +31,7 @@ namespace MvcKutuphane.Controllers
             if (!ModelState.IsValid)
             {
                 return View("UyeEkle");
-                //arka taraftaki dataannotation sağlanamadıysa personelekleye geri dön
+           
             }
             db.TBLUYELER.Add(p);
             db.SaveChanges();
@@ -62,7 +62,7 @@ namespace MvcKutuphane.Controllers
         public ActionResult UyeGuncelle(TBLUYELER p)
         {
             var uye = db.TBLUYELER.Find(p.ID);
-            uye.AD = p.AD;   //kategorinin yeni adı=indexten giriş yapılan ad
+            uye.AD = p.AD;  
             uye.SOYAD = p.SOYAD;
             uye.MAIL= p.MAIL;
             uye.KULLANICIADI= p.KULLANICIADI;
@@ -76,7 +76,7 @@ namespace MvcKutuphane.Controllers
 
         public ActionResult UyeKitapGecmis(int id)
         {
-            //kullanıcının kitap geçmişini veritabanından çeker ve kullanıcıya görüntüler. 
+            
             var kitapgecmis = db.TBLHAREKET.Where(x=>x.UYE==id).ToList();
             var uyebilgisi = db.TBLUYELER.Where(y => y.ID == id).Select(z => z.AD + " " + z.SOYAD).FirstOrDefault();
             ViewBag.uyeblgs = uyebilgisi;

@@ -63,9 +63,9 @@ namespace MvcKutuphane.Controllers
         public ActionResult AdminGuncelle(TBLADMIN p)
         {
             var adm = db.TBLADMIN.Find(p.ID);
-            adm.Kullanici = p.Kullanici;   //kategorinin yeni adı=indexten yeni giriş yapılan ad
-            adm.Sifre = p.Sifre;   //kategorinin yeni adı=indexten yeni giriş yapılan ad
-            adm.Yetki = p.Yetki;   //kategorinin yeni adı=indexten yeni giriş yapılan ad
+            adm.Kullanici = p.Kullanici;   
+            adm.Sifre = p.Sifre;  
+            adm.Yetki = p.Yetki;   
             db.SaveChanges();
             return RedirectToAction("Index2");
         }
